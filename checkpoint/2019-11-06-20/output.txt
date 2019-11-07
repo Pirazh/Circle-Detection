@@ -1,0 +1,413 @@
+Training Session on 20191106-20
+Used Arguments:
+phase:train
+ckpt:./checkpoint/2019-11-06-20
+train_batch_size:128
+train_set_size:100000
+dev_batch_size:128
+dev_set_size:5000
+lr:0.0001
+weight_decay:0.0005
+num_workers:16
+start_epoch:0
+epochs:20
+loss_type:Both
+Lambda:1.0
+evaluate_every_n_epoch:1
+mGPU:True
+resume:False
+
+Network Info: 
+Number of Network parameters: 0.70 Million
+circle_detector(
+  (conv_layers): Sequential(
+    (0): Conv2d(1, 64, kernel_size=(3, 3), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (4): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+    (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): ReLU()
+    (7): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (8): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1))
+    (9): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (10): ReLU()
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (12): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1))
+    (13): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (14): ReLU()
+    (15): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (16): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1))
+    (17): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (18): ReLU()
+  )
+  (fc_layer): Sequential(
+    (0): Linear(in_features=3200, out_features=100, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=100, out_features=20, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=20, out_features=3, bias=True)
+  )
+)
+Epoch: 1
+[Train loss/batch: 0.2350]
+[Train loss/batch: 0.1630]
+[Train loss/batch: 0.1278]
+[Train loss/batch: 0.1011]
+[Train loss/batch: 0.0810]
+[Train loss/batch: 0.0744]
+[Train loss/batch: 0.0727]
+[Train loss/batch: 0.0679]
+[Train loss/batch: 0.0565]
+[Train loss/batch: 0.0742]
+[Train loss/batch: 0.0644]
+[Train loss/batch: 0.0569]
+[Train loss/batch: 0.0539]
+[Train loss/batch: 0.0555]
+[Train loss/batch: 0.0387]
+Average Training Loss : 0.0924
+Dev Set Prediction Score with IOU 0.7 is 0.2354
+Epoch: 2
+[Train loss/batch: 0.0421]
+[Train loss/batch: 0.0377]
+[Train loss/batch: 0.0400]
+[Train loss/batch: 0.0341]
+[Train loss/batch: 0.0366]
+[Train loss/batch: 0.0455]
+[Train loss/batch: 0.0314]
+[Train loss/batch: 0.0291]
+[Train loss/batch: 0.0256]
+[Train loss/batch: 0.0325]
+[Train loss/batch: 0.0271]
+[Train loss/batch: 0.0304]
+[Train loss/batch: 0.0271]
+[Train loss/batch: 0.0257]
+[Train loss/batch: 0.0282]
+Average Training Loss : 0.0338
+Dev Set Prediction Score with IOU 0.7 is 0.343
+Epoch: 3
+[Train loss/batch: 0.0204]
+[Train loss/batch: 0.0268]
+[Train loss/batch: 0.0241]
+[Train loss/batch: 0.0212]
+[Train loss/batch: 0.0273]
+[Train loss/batch: 0.0216]
+[Train loss/batch: 0.0219]
+[Train loss/batch: 0.0240]
+[Train loss/batch: 0.0222]
+[Train loss/batch: 0.0194]
+[Train loss/batch: 0.0168]
+[Train loss/batch: 0.0224]
+[Train loss/batch: 0.0202]
+[Train loss/batch: 0.0193]
+[Train loss/batch: 0.0254]
+Average Training Loss : 0.0220
+Dev Set Prediction Score with IOU 0.7 is 0.6386
+Epoch: 4
+[Train loss/batch: 0.0203]
+[Train loss/batch: 0.0181]
+[Train loss/batch: 0.0215]
+[Train loss/batch: 0.0147]
+[Train loss/batch: 0.0145]
+[Train loss/batch: 0.0163]
+[Train loss/batch: 0.0166]
+[Train loss/batch: 0.0171]
+[Train loss/batch: 0.0140]
+[Train loss/batch: 0.0190]
+[Train loss/batch: 0.0161]
+[Train loss/batch: 0.0164]
+[Train loss/batch: 0.0149]
+[Train loss/batch: 0.0163]
+[Train loss/batch: 0.0124]
+Average Training Loss : 0.0165
+Dev Set Prediction Score with IOU 0.7 is 0.5736
+Epoch: 5
+[Train loss/batch: 0.0152]
+[Train loss/batch: 0.0166]
+[Train loss/batch: 0.0135]
+[Train loss/batch: 0.0135]
+[Train loss/batch: 0.0120]
+[Train loss/batch: 0.0150]
+[Train loss/batch: 0.0133]
+[Train loss/batch: 0.0205]
+[Train loss/batch: 0.0122]
+[Train loss/batch: 0.0158]
+[Train loss/batch: 0.0129]
+[Train loss/batch: 0.0118]
+[Train loss/batch: 0.0112]
+[Train loss/batch: 0.0113]
+[Train loss/batch: 0.0125]
+Average Training Loss : 0.0138
+Dev Set Prediction Score with IOU 0.7 is 0.6854
+Epoch: 6
+[Train loss/batch: 0.0111]
+[Train loss/batch: 0.0130]
+[Train loss/batch: 0.0120]
+[Train loss/batch: 0.0115]
+[Train loss/batch: 0.0119]
+[Train loss/batch: 0.0115]
+[Train loss/batch: 0.0116]
+[Train loss/batch: 0.0112]
+[Train loss/batch: 0.0112]
+[Train loss/batch: 0.0111]
+[Train loss/batch: 0.0144]
+[Train loss/batch: 0.0095]
+[Train loss/batch: 0.0130]
+[Train loss/batch: 0.0114]
+[Train loss/batch: 0.0093]
+Average Training Loss : 0.0117
+Dev Set Prediction Score with IOU 0.7 is 0.7974
+Epoch: 7
+[Train loss/batch: 0.0091]
+[Train loss/batch: 0.0137]
+[Train loss/batch: 0.0095]
+[Train loss/batch: 0.0109]
+[Train loss/batch: 0.0102]
+[Train loss/batch: 0.0082]
+[Train loss/batch: 0.0131]
+[Train loss/batch: 0.0102]
+[Train loss/batch: 0.0109]
+[Train loss/batch: 0.0139]
+[Train loss/batch: 0.0085]
+[Train loss/batch: 0.0088]
+[Train loss/batch: 0.0104]
+[Train loss/batch: 0.0105]
+[Train loss/batch: 0.0109]
+Average Training Loss : 0.0107
+Dev Set Prediction Score with IOU 0.7 is 0.818
+Epoch: 8
+[Train loss/batch: 0.0095]
+[Train loss/batch: 0.0094]
+[Train loss/batch: 0.0094]
+[Train loss/batch: 0.0085]
+[Train loss/batch: 0.0094]
+[Train loss/batch: 0.0101]
+[Train loss/batch: 0.0128]
+[Train loss/batch: 0.0104]
+[Train loss/batch: 0.0090]
+[Train loss/batch: 0.0127]
+[Train loss/batch: 0.0103]
+[Train loss/batch: 0.0093]
+[Train loss/batch: 0.0107]
+[Train loss/batch: 0.0097]
+[Train loss/batch: 0.0084]
+Average Training Loss : 0.0098
+Dev Set Prediction Score with IOU 0.7 is 0.8852
+Epoch: 9
+[Train loss/batch: 0.0082]
+[Train loss/batch: 0.0073]
+[Train loss/batch: 0.0074]
+[Train loss/batch: 0.0093]
+[Train loss/batch: 0.0079]
+[Train loss/batch: 0.0120]
+[Train loss/batch: 0.0097]
+[Train loss/batch: 0.0095]
+[Train loss/batch: 0.0083]
+[Train loss/batch: 0.0075]
+[Train loss/batch: 0.0104]
+[Train loss/batch: 0.0083]
+[Train loss/batch: 0.0102]
+[Train loss/batch: 0.0102]
+[Train loss/batch: 0.0097]
+Average Training Loss : 0.0091
+Dev Set Prediction Score with IOU 0.7 is 0.8362
+Epoch: 10
+[Train loss/batch: 0.0081]
+[Train loss/batch: 0.0081]
+[Train loss/batch: 0.0084]
+[Train loss/batch: 0.0091]
+[Train loss/batch: 0.0087]
+[Train loss/batch: 0.0090]
+[Train loss/batch: 0.0101]
+[Train loss/batch: 0.0094]
+[Train loss/batch: 0.0108]
+[Train loss/batch: 0.0114]
+[Train loss/batch: 0.0071]
+[Train loss/batch: 0.0098]
+[Train loss/batch: 0.0089]
+[Train loss/batch: 0.0086]
+[Train loss/batch: 0.0089]
+Average Training Loss : 0.0084
+Dev Set Prediction Score with IOU 0.7 is 0.8924
+Epoch: 11
+[Train loss/batch: 0.0078]
+[Train loss/batch: 0.0082]
+[Train loss/batch: 0.0075]
+[Train loss/batch: 0.0091]
+[Train loss/batch: 0.0095]
+[Train loss/batch: 0.0070]
+[Train loss/batch: 0.0062]
+[Train loss/batch: 0.0128]
+[Train loss/batch: 0.0083]
+[Train loss/batch: 0.0076]
+[Train loss/batch: 0.0073]
+[Train loss/batch: 0.0075]
+[Train loss/batch: 0.0085]
+[Train loss/batch: 0.0072]
+[Train loss/batch: 0.0067]
+Average Training Loss : 0.0081
+Dev Set Prediction Score with IOU 0.7 is 0.9058
+Epoch: 12
+[Train loss/batch: 0.0085]
+[Train loss/batch: 0.0079]
+[Train loss/batch: 0.0072]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0083]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0087]
+[Train loss/batch: 0.0076]
+[Train loss/batch: 0.0076]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0079]
+[Train loss/batch: 0.0121]
+[Train loss/batch: 0.0091]
+[Train loss/batch: 0.0062]
+[Train loss/batch: 0.0079]
+Average Training Loss : 0.0078
+Dev Set Prediction Score with IOU 0.7 is 0.8754
+Epoch: 13
+[Train loss/batch: 0.0065]
+[Train loss/batch: 0.0076]
+[Train loss/batch: 0.0097]
+[Train loss/batch: 0.0056]
+[Train loss/batch: 0.0078]
+[Train loss/batch: 0.0061]
+[Train loss/batch: 0.0069]
+[Train loss/batch: 0.0080]
+[Train loss/batch: 0.0087]
+[Train loss/batch: 0.0075]
+[Train loss/batch: 0.0066]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0096]
+[Train loss/batch: 0.0069]
+[Train loss/batch: 0.0070]
+Average Training Loss : 0.0075
+Dev Set Prediction Score with IOU 0.7 is 0.9082
+Epoch: 14
+[Train loss/batch: 0.0064]
+[Train loss/batch: 0.0067]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0067]
+[Train loss/batch: 0.0069]
+[Train loss/batch: 0.0076]
+[Train loss/batch: 0.0106]
+[Train loss/batch: 0.0070]
+[Train loss/batch: 0.0069]
+[Train loss/batch: 0.0092]
+[Train loss/batch: 0.0087]
+[Train loss/batch: 0.0070]
+[Train loss/batch: 0.0075]
+[Train loss/batch: 0.0093]
+[Train loss/batch: 0.0074]
+Average Training Loss : 0.0073
+Dev Set Prediction Score with IOU 0.7 is 0.8816
+Epoch: 15
+[Train loss/batch: 0.0073]
+[Train loss/batch: 0.0081]
+[Train loss/batch: 0.0071]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0080]
+[Train loss/batch: 0.0058]
+[Train loss/batch: 0.0056]
+[Train loss/batch: 0.0070]
+[Train loss/batch: 0.0072]
+[Train loss/batch: 0.0069]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0073]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0077]
+[Train loss/batch: 0.0060]
+Average Training Loss : 0.0070
+Dev Set Prediction Score with IOU 0.7 is 0.9208
+Epoch: 16
+[Train loss/batch: 0.0064]
+[Train loss/batch: 0.0066]
+[Train loss/batch: 0.0056]
+[Train loss/batch: 0.0069]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0074]
+[Train loss/batch: 0.0079]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0051]
+[Train loss/batch: 0.0071]
+[Train loss/batch: 0.0066]
+[Train loss/batch: 0.0061]
+[Train loss/batch: 0.0067]
+[Train loss/batch: 0.0066]
+[Train loss/batch: 0.0071]
+Average Training Loss : 0.0069
+Dev Set Prediction Score with IOU 0.7 is 0.8826
+Epoch: 17
+[Train loss/batch: 0.0079]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0075]
+[Train loss/batch: 0.0054]
+[Train loss/batch: 0.0067]
+[Train loss/batch: 0.0060]
+[Train loss/batch: 0.0071]
+[Train loss/batch: 0.0052]
+[Train loss/batch: 0.0070]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0058]
+[Train loss/batch: 0.0064]
+[Train loss/batch: 0.0060]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0057]
+Average Training Loss : 0.0067
+Dev Set Prediction Score with IOU 0.7 is 0.942
+Epoch: 18
+[Train loss/batch: 0.0072]
+[Train loss/batch: 0.0060]
+[Train loss/batch: 0.0056]
+[Train loss/batch: 0.0054]
+[Train loss/batch: 0.0065]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0082]
+[Train loss/batch: 0.0061]
+[Train loss/batch: 0.0056]
+[Train loss/batch: 0.0074]
+[Train loss/batch: 0.0057]
+[Train loss/batch: 0.0060]
+[Train loss/batch: 0.0063]
+Average Training Loss : 0.0065
+Dev Set Prediction Score with IOU 0.7 is 0.5728
+Epoch: 19
+[Train loss/batch: 0.0086]
+[Train loss/batch: 0.0070]
+[Train loss/batch: 0.0061]
+[Train loss/batch: 0.0050]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0050]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0059]
+[Train loss/batch: 0.0069]
+[Train loss/batch: 0.0058]
+[Train loss/batch: 0.0062]
+[Train loss/batch: 0.0060]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0055]
+[Train loss/batch: 0.0059]
+Average Training Loss : 0.0065
+Dev Set Prediction Score with IOU 0.7 is 0.9176
+Epoch: 20
+[Train loss/batch: 0.0055]
+[Train loss/batch: 0.0060]
+[Train loss/batch: 0.0056]
+[Train loss/batch: 0.0057]
+[Train loss/batch: 0.0065]
+[Train loss/batch: 0.0082]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0063]
+[Train loss/batch: 0.0073]
+[Train loss/batch: 0.0068]
+[Train loss/batch: 0.0059]
+[Train loss/batch: 0.0067]
+[Train loss/batch: 0.0067]
+[Train loss/batch: 0.0070]
+[Train loss/batch: 0.0068]
+Average Training Loss : 0.0063
+Dev Set Prediction Score with IOU 0.7 is 0.905
+Finished Trainig Session in 1 hours & 1 minutes, Best Accuracy Achieved: 0.94
+
