@@ -20,7 +20,7 @@ def main(args):
     print(net)
     
     if args.resume or args.phase == 'test':
-        net.load_state_dict(torch.load(args.resumed_ckpt)['net_state_dict'])
+        net.load_state_dict(torch.load(args.resumed_ckpt, map_location='cuda:0' if torch.cuda.is_available() else 'cpu')['net_state_dict'])
         print('Resumed Checkpoint: {} is Loaded!'.format(args.resumed_ckpt))
 
     if args.phase == 'train':
